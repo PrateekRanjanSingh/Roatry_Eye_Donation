@@ -4,15 +4,15 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/create',function(req,res){
-	if(!req.session.authenticated){
-		return res.render('admin/login',{err:"Please Login."});
-	}
+	// if(!req.session.authenticated){
+	// 	return res.render('admin/login',{err:"Please Login."});
+	// }
 	return res.render('donor/create');
 });
 router.post('/create',function(req,res){
-	if(!req.session.authenticated){
-		return res.render('admin/panel',{err:"Please Login."});
-	}
+	// if(!req.session.authenticated){
+	// 	return res.render('admin/panel',{err:"Please Login."});
+	// }
 	Donor.create({name:req.body.name},function(err,donor){
 		if(err){
 			return res.render('admin/panel',{err:"Something Went Wrong."});
