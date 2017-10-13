@@ -11,15 +11,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/stylesheets/main.css" />
 		<link rel="stylesheet" href="/stylesheets/table.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-			<%- include('../header.ejs') %>
+			<div style="margin-bottom: 70px;"><%- include('../header.ejs') %></div>
+			
+			<h1 style="background-color: #0275d8; margin: 0; padding: 0;"><center>Donor Details</center></h1>
 
 			<!-- Main -->
-				<article id="main">
+				<!-- <article id="main">
 
 					<header class="special container">
 						<span class="icon fa-mobile"></span>
@@ -38,7 +41,110 @@
 							</div>
 						</section>
 
-				</article>
+				</article> -->
+			<div style="overflow-x: auto;">
+				<table class="table">
+						  <thead class="thead-inverse">
+						    <tr>
+						      <th>#</th>
+						      <th>fa_hus_name</th>
+						      <th>Name</th>
+						      <th>Age</th>
+						      <th>Death Date</th>
+						      <th>Time of Death</th>
+						      <th>Donation Date</th>
+						      <th>Donation Time</th>
+						      <th>Cause of Death</th>
+						      <th>Medical History</th>
+						      <th>Collection Number</th>
+						    </tr>
+						  </thead>
+						  <tbody id="one">
+						    <tr>
+						      <th scope="row">1</th>
+						      <td>Mark</td>
+						      <td>Otto</td>
+						      <td>@mdo</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">2</th>
+						      <td>Jacob</td>
+						      <td>Thornton</td>
+						      <td>@fat</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">3</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">4</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">5</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">6</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						  </tbody>
+
+						  <tbody id="two" style="display: none;">
+						    <tr>
+						      <th scope="row">7</th>
+						      <td>Mark</td>
+						      <td>Otto</td>
+						      <td>@mdo</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">8</th>
+						      <td>Jacob</td>
+						      <td>Thornton</td>
+						      <td>@fat</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">9</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">10</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">11</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">12</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+					<ul class="pagination">
+					  <li><a href="#" id="1">1</a></li>
+					  <li><a href="#" id="2">2</a></li>
+					  <li><a href="#">3</a></li>
+					  <li><a href="#">4</a></li>
+					  <li><a href="#">5</a></li>
+					</ul>
 
 			<!-- Footer -->
 				<%- include('../footer') %>
@@ -55,5 +161,15 @@
 			<!--[if lte IE 8]><script src="/javascripts
 /ie/respond.min.js"></script><![endif]-->
 			<script src="/javascripts/main.js"></script>
+			<script type="text/javascript">
+				$("#1").click(function () {
+					$("#one").show();
+					$("#two").hide();
+				})
+				$("#2").click(function () {
+					$("#one").hide();
+					$("#two").show();
+				})
+			</script>
 	</body>
 </html>
