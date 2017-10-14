@@ -26,19 +26,19 @@
 
 							<!-- Content -->
 								<div class="content" style="text-align:left">
-									<form action="/pres/create" method="post">
+									<form action="/pres/update" method="post">
 										<div class="row 50%">
 											<div class="12u">
 												Name:
-												<input type="text" name="name" placeholder="Name">
+												<input type="text" name="name" placeholder="Name" value=<%=pres.name%>>
 											</div>
 											<div class="12u">
 												Phone No:
-												<input type="text" name="phoneno" placeholder="Phone Number">
+												<input type="text" name="phoneno" placeholder="Phone Number" value=<%=pres.phoneno%>>
 											</div>
 											<div class="12u">
 												Email:
-												<input type="email" name="email" placeholder="Email">
+												<input type="email" name="email" placeholder="Email" value=<%=pres.email%>>
 											</div>
 										</div>
 										<div class="row 50%">
