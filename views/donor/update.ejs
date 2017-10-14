@@ -26,7 +26,7 @@
 
 							<!-- Content -->
 								<div class="content" style="text-align:left">
-									<form action="/donor/create" method="post">
+									<form action="/donor/update" method="post">
 										<div class="row 50%">
 											<div class="12u">
 												Name Of Donor:
@@ -61,6 +61,7 @@
 											<div class="6u">
 												<textarea name="medical_history" placeholder="Medical History" rows="5"><%=donor.medical_history%></textarea>
 											</div>
+											<input type="hidden" name="collec_num" value=<%=donor.collec_num%>>
 										</div>
 										<div class="row">
 											<div class="12u">
