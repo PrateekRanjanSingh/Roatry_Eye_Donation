@@ -11,7 +11,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/stylesheets/main.css" />
 		<link rel="stylesheet" href="/stylesheets/table.css">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"> -->
+		<style type="text/css">
+			ul li{
+				 display: inline;
+				 text-decoration: none !important;
+				 font-color: black !important;
+				 padding: 5px;
+			}
+			ul :hover{
+				cursor: pointer;
+				background-color: #0275d8;
+				color: white;
+			}
+			#tablehead{
+				background-color: black;
+				color: white;
+				display: table-header-group;
+			}
+			th,td{
+				padding: 5px;
+			}
+		</style>
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -22,27 +43,41 @@
 			<h1 style="background-color: #0275d8; margin: 0; padding: 0;"><center>Donor Details</center></h1>
 
 			<!-- Main -->
-				<!-- <article id="main">
+				<article id="main">
 
 					<header class="special container">
 						<span class="icon fa-mobile"></span>
 						<h2>And finally there's <strong>No Sidebar</strong></h2>
 						<p>Where that in the center faces the nameless horrors alone.</p>
 					</header>
-						<section class="wrapper style4 container special">
-							<div class="row">
-								<table class="responstable">
-									<tr><th>Name</th><th>Father/Husband Name</th><th>Age</th><th>Donation Date</th></tr>
-									<%for(var i=0;i<donors.length;i++){%>
-									<tr>
-									</tr>
-									<%}%>
-								</table>
-							</div>
-						</section>
+						<!-- <section class="wrapper style4 container special">
+							<div class="row"> -->
+								<div style="overflow-x: auto;">
+									<table style="border-collapse: collapse;">
+										<thead id="tablehead">
+											<!-- <tr><th>Name</th><th>Father/Husband Name</th><th>Age</th><th>Donation Date</th></tr> -->
+											<tr>
+										      <th>#</th>
+										      <th>fa_hus_name</th>
+										      <th>Name</th>
+										      <th>Age</th>
+										      <th>Death Date</th>
+										      <th>Donation Date</th>
+										      <th>Donation Time</th>
+										      <th>Collection Number</th>
+										    </tr>
+									    </thead>
+										<%for(var i=0;i<donors.length;i++){%>
+										<tr>
+										</tr>
+										<%}%>
+									</table>
+								</div>
+						<!-- 	</div>
+						</section> -->
 
-				</article> -->
-			<div style="overflow-x: auto;">
+				</article>
+			<!-- <div style="overflow-x: auto;">
 				<table class="table">
 						  <thead class="thead-inverse">
 						    <tr>
@@ -137,14 +172,18 @@
 						    </tr>
 						  </tbody>
 						</table>
-					</div>
-					<ul class="pagination">
-					  <li><a href="#" id="1">1</a></li>
-					  <li><a href="#" id="2">2</a></li>
-					  <li><a href="#">3</a></li>
-					  <li><a href="#">4</a></li>
-					  <li><a href="#">5</a></li>
-					</ul>
+					</div> -->		
+					<center>
+						<div style="text-align: center;">
+							<ul>
+							  <li id="1">1</li>
+							  <li id="2">2</li>
+							  <li>3</li>
+							  <li>4</li>
+							  <li>5</li>
+							</ul>
+						</div>
+					</center>
 
 			<!-- Footer -->
 				<%- include('../footer') %>
