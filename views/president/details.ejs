@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Twenty by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/stylesheets/main.css" />
+		<link rel="stylesheet" href="/stylesheets/table.css">
+		<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"> -->
+		<style type="text/css">
+			#pagination ul li{
+				 display: inline;
+				 text-decoration: none !important;
+				 font-color: black !important;
+				 padding: 5px;
+			}
+			#pagination ul :hover{
+				cursor: pointer;
+				background-color: #0275d8;
+				color: white;
+				border-radius: 50%;
+			}
+			#tablehead{
+				background-color: black;
+				color: white;
+				display: table-header-group;
+			}
+			th,td{
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<div style="margin-bottom: 70px;"><%- include('../header.ejs') %></div>
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="icon fa-mobile"></span>
+						<h2>And finally there's <strong>No Sidebar</strong></h2>
+						<p>Where that in the center faces the nameless horrors alone.</p>
+					</header>
+						<!-- <section class="wrapper style4 container special">
+							<div class="row"> -->
+								<h1 style="background-color: #0275d8; margin: 0; padding: 0; color:black;"><center>President Details</center></h1>
+								<div style="overflow-x: auto;">
+									<table style="border-collapse: collapse;">
+										<thead id="tablehead">
+											<!-- <tr><th>Name</th><th>Father/Husband Name</th><th>Age</th><th>Donation Date</th></tr> -->
+											<tr>
+										      <th>#</th>
+										      <th>Name</th>
+										      <th>Phone Number</th>
+										      <th>Email</th>
+										      <th>Start</th>
+										      <th>End</th>
+										    </tr>
+									    </thead>
+										<%for(var i=0;i<donors.length;i++){%>
+										<tr>
+										</tr>
+										<%}%>
+									</table>
+								</div>
+						<!-- 	</div>
+						</section> -->
+				</article>
+			<!-- <div style="overflow-x: auto;">
+				<table class="table">
+						  <thead class="thead-inverse">
+						    <tr>
+						      <th>#</th>
+						      <th>fa_hus_name</th>
+						      <th>Name</th>
+						      <th>Age</th>
+						      <th>Death Date</th>
+						      <th>Time of Death</th>
+						      <th>Donation Date</th>
+						      <th>Donation Time</th>
+						      <th>Cause of Death</th>
+						      <th>Medical History</th>
+						      <th>Collection Number</th>
+						    </tr>
+						  </thead>
+						  <tbody id="one">
+						    <tr>
+						      <th scope="row">1</th>
+						      <td>Mark</td>
+						      <td>Otto</td>
+						      <td>@mdo</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">2</th>
+						      <td>Jacob</td>
+						      <td>Thornton</td>
+						      <td>@fat</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">3</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">4</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">5</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">6</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						  </tbody>
+
+						  <tbody id="two" style="display: none;">
+						    <tr>
+						      <th scope="row">7</th>
+						      <td>Mark</td>
+						      <td>Otto</td>
+						      <td>@mdo</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">8</th>
+						      <td>Jacob</td>
+						      <td>Thornton</td>
+						      <td>@fat</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">9</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">10</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">11</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">12</th>
+						      <td>Larry</td>
+						      <td>the Bird</td>
+						      <td>@twitter</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div> -->		
+					<center>
+						<div id="pagination" style="text-align: center;">
+							<ul>
+							  <li id="1">1</li>
+							  <li id="2">2</li>
+							  <li>3</li>
+							  <li>4</li>
+							  <li>5</li>
+							</ul>
+						</div>
+					</center>
+
+			<!-- Footer -->
+				<%- include('../footer') %>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="/javascripts/jquery.min.js"></script>
+			<script src="/javascripts/jquery.dropotron.min.js"></script>
+			<script src="/javascripts/jquery.scrolly.min.js"></script>
+			<script src="/javascripts/jquery.scrollgress.min.js"></script>
+			<script src="/javascripts/skel.min.js"></script>
+			<script src="/javascripts/util.js"></script>
+			<!--[if lte IE 8]><script src="/javascripts
+/ie/respond.min.js"></script><![endif]-->
+			<script src="/javascripts/main.js"></script>
+			<script type="text/javascript">
+				$("#1").click(function () {
+					$("#one").show();
+					$("#two").hide();
+				})
+				$("#2").click(function () {
+					$("#one").hide();
+					$("#two").show();
+				})
+			</script>
+	</body>
+</html>
